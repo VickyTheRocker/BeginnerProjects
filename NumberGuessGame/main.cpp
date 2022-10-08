@@ -1,70 +1,47 @@
 #include<iostream>
+#include "easy.cpp"
+#include "hard.cpp"
 using namespace std;
 
-class NumberGuessGame
+class NumberGuessGame : virtual EasyGame, virtual HardGame
 {
-    int un, cn;
-
     private:
 
-        bool checkWin()
-        {
-            if(un == cn)
-            {
-                return true;
-            }
-            return false;
-        }
+        int c;
 
     public:
 
-        NumberGuessGame(int n)
+        void play()
         {
-            this->un = n;
-            cn = (rand() % 10) + 1;
-        }
+            cout<<"1. Hard mode.\n";
+            cout<<"2. Easy mode.\n";
+            cout<<"Enter your choice:\n";
+            cin>>c;
 
-        void display()
-        {
-            cout<<"Your choice: "<<un<<"\n";
-            cout<<"Computer's choice: "<<cn<<"\n";
-
-            if(checkWin())
+            switch(c)
             {
-                cout<<"You won!!\n";
-            }
-            else
-            {
-                cout<<"You lose!\n";
+                case 1:
+                    HardGame :: play();
+                break;
+                case 2:
+                    EasyGame :: play();
+                break;
+                default:
+                    cout<<"Wrong choice!\n";
+                    exit(0);
             }
         }
-
-        
-
 };
 
 int main()
 {
-    int un;
-    
-    while(true)
+    NumberGuessGame ob;
+
+    while (true)
     {
-        cout<<"Enter a number between 1 and 10 (both inclusive):\n";
-        cout<<"(Enter \"0\" to exit)\n";
-        cin>>un;
-
-        if(un == 0)
-        {
-            cout<<"Thanks for playing!\n";
-            exit(0);
-        }
-        else
-        {
-            NumberGuessGame ob(un);
-
-            ob.display();
-        }
-
+        ob.play();
     }
+    
+
     return 0;
 }
