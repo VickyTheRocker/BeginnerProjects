@@ -1,25 +1,57 @@
 #include<iostream>
 using namespace std;
 
-int main()
+class NumberGuessGame
 {
     int un, cn;
+
+    private:
+
+        bool checkWin()
+        {
+            if(un == cn)
+            {
+                return true;
+            }
+            return false;
+        }
+
+    public:
+
+        NumberGuessGame(int n)
+        {
+            this->un = n;
+            cn = (rand() % 10) + 1;
+        }
+
+        void display()
+        {
+            cout<<"Your choice: "<<un<<"\n";
+            cout<<"Computer's choice: "<<cn<<"\n";
+
+            if(checkWin())
+            {
+                cout<<"You won!!\n";
+            }
+            else
+            {
+                cout<<"You lose!\n";
+            }
+        }
+
+        
+
+};
+
+int main()
+{
+    int un;
     cout<<"Enter a number between 1 and 10 (both inclusive):\n";
     cin>>un;
 
-    cn = (rand() % 10) + 1;
+    NumberGuessGame ob(un);
 
-    cout<<"Your choice: "<<un<<"\n";
-    cout<<"Computer's choice: "<<cn<<"\n";
-
-    if(un == cn)
-    {
-        cout<<"You won!!\n";
-    }
-    else
-    {
-        cout<<"You lose!\n";
-    }
+    ob.display();
 
     return 0;
 }
