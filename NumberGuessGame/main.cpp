@@ -46,12 +46,25 @@ class NumberGuessGame
 int main()
 {
     int un;
-    cout<<"Enter a number between 1 and 10 (both inclusive):\n";
-    cin>>un;
+    
+    while(true)
+    {
+        cout<<"Enter a number between 1 and 10 (both inclusive):\n";
+        cout<<"(Enter \"0\" to exit)\n";
+        cin>>un;
 
-    NumberGuessGame ob(un);
+        if(un == 0)
+        {
+            cout<<"Thanks for playing!\n";
+            exit(0);
+        }
+        else
+        {
+            NumberGuessGame ob(un);
 
-    ob.display();
+            ob.display();
+        }
 
+    }
     return 0;
 }
