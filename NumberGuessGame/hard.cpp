@@ -1,37 +1,33 @@
-#include<iostream>
 #include "gamebase.cpp"
-using namespace std;
 
-class HardGame : virtual protected GameBase
+void HardGame :: comp()
 {
-    private:
-
-        void comp()
+    if(un == 1 || un == 10)
+    {
+        cn = (rand() % 9) +1;
+    }
+    else
+    {
+        while(true)
         {
-            if(un == 1 || un == 10)
+            cn = (rand() % 10) +1;
+            if(cn != un)
             {
-                cn = (rand() % 9) +1;
-            }
-            else
-            {
-                while(true)
-                {
-                    cn = (rand() % 10) +1;
-                    if(cn != un)
-                    {
-                        break;
-                    }
-                }
+                break;
             }
         }
+    }
+}
 
-    protected:
-
-        void play()
-        {
-            HardGame ob;
-            ob.input();
-            ob.comp();
-            ob.display();
-        }
-};
+void HardGame :: play()
+{
+    HardGame ob;
+    ob.input();
+    if(un==0)
+    {
+        std::cout<<"Session being terminated...\n";
+        exit(0);
+    }
+    ob.comp();
+    ob.display();
+}
