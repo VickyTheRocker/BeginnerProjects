@@ -1,23 +1,19 @@
-#include<iostream>
 #include "gamebase.cpp"
-using namespace std;
 
-class EasyGame : virtual protected GameBase
+void EasyGame :: comp()
 {
-    private:
+    cn = (rand() % 10) + 1;
+}
 
-        void comp()
-        {
-            cn = (rand() % 10) + 1;
-        }
-
-    protected:
-
-        void play()
-        {
-            EasyGame ob;
-            ob.input();
-            ob.comp();
-            ob.display();
-        }
-};
+void EasyGame :: play()
+{
+    EasyGame ob;
+    ob.input();
+    if(un==0)
+    {
+        std::cout<<"Session being terminated...\n";
+        exit(0);
+    }
+    ob.comp();
+    ob.display();
+}
