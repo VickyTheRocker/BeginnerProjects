@@ -1,6 +1,12 @@
-#include "gamebase.cpp"
+/*
 
-void HardGame :: comp()
+This file implements the EasyGame class which is responsible for the easy mode of the NumberGuessGame
+
+*/
+
+#include "gamebase.cpp"    // GameBase class implementation included.
+
+void HardGame :: comp()    // This method computes random number for computer in such a way that user never wins.
 {
     if(un == 1 || un == 10)
     {
@@ -19,7 +25,7 @@ void HardGame :: comp()
     }
 }
 
-void HardGame :: play()
+void HardGame :: play()    // This method implements the hard mode gameplay
 {
     HardGame ob;
     ob.input();
