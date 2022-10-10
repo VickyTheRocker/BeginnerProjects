@@ -1,3 +1,9 @@
+/*
+
+This file executes the project.
+
+*/
+
 #include "gameplay.cpp"
 
 int main()
