@@ -1,3 +1,12 @@
+/*
+
+This file implements the NumberGuessGame class which is responsible for the implementation of easy or hard mode of the NumberGuessGame as per user's choice.
+
+*/
+
+
+// All the necessary files are included that finally implement the whole game.
+
 #include<iostream>
 #include "gamebase.cpp"
 #include "easy.cpp"
@@ -7,7 +16,7 @@ using namespace std;
 
 int c;
 
-void NumberGuessGame :: play()
+void NumberGuessGame :: play() // this method implements easy or hard game mode as per user's choice.
 {
     cout<<"1. Hard mode.\n";
     cout<<"2. Easy mode.\n";
