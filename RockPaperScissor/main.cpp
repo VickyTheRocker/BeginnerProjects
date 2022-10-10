@@ -17,7 +17,6 @@ int main()
         cin>>uc;
 
         cc = a[(rand() % 3)]-1;
-        cout<<cc<<"\n";
 
         cout<<"You chose: "<<b[uc-1]<<"\n";
         cout<<"Computer choose: "<<b[cc]<<"\n";
