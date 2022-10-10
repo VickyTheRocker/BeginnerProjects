@@ -1,11 +1,17 @@
-#include "gamebase.cpp"
+/*
 
-void EasyGame :: comp()
+This file implements the EasyGame class which is responsible for the easy mode of the NumberGuessGame
+
+*/
+
+#include "gamebase.cpp"    // The base file is included that includes the implementation of GameBase class.
+
+void EasyGame :: comp()    // This method computes random number for computer.
 {
     cn = (rand() % 10) + 1;
 }
 
-void EasyGame :: play()
+void EasyGame :: play()    // This method implements the easy mode gameplay.
 {
     EasyGame ob;
     ob.input();
