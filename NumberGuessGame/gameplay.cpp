@@ -1,6 +1,6 @@
 /*
 
-This file implements the EasyGame class which is responsible for the easy mode of the NumberGuessGame
+This file implements the NumberGuessGame class which is responsible for the implementation of easy or hard mode of the NumberGuessGame as per user's choice.
 
 */
 
