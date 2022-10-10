@@ -14,6 +14,14 @@ void EasyGame :: play()
         std::cout<<"Session being terminated...\n";
         exit(0);
     }
-    ob.comp();
-    ob.display();
+    else if(un>10 || un<0)
+    {
+        std::cout<<"Invalid input! Session being terminated...\n";
+        exit(0);
+    }
+    else
+    {
+        ob.comp();
+        ob.display();
+    }
 }
