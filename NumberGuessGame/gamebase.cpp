@@ -25,22 +25,23 @@ bool GameBase :: checkWin()    // This method check who wins
 void GameBase :: input()    // This method takes user input
 {
     cout<<"Enter a number between 1 and 10 (both inclusive)\n";
-    cout<<"Enter \"0\" to exit.\n";
+    cout<<"Enter \"0\" to exit.\n\n";
+    cout<<"=> ";
     cin>>un;
 }
 
 void GameBase :: display()    // This method displays the results
 {
-    cout<<"Your choice: "<<un<<"\n";
+    cout<<"\nYour choice: "<<un<<"\n";
     cout<<"Computer's choice: "<<cn<<"\n";
 
     if(checkWin())
     {
-        cout<<"You won!!\n";
+        cout<<"You Won!!\n\n";
     }
     else
     {
-        cout<<"You lose!\n";
+        cout<<"You Lose!\n\n";
     }
 }
 
