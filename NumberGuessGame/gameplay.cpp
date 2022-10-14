@@ -12,16 +12,23 @@ This file implements the NumberGuessGame class which is responsible for the impl
 #include "easy.cpp"
 #include "hard.cpp"
 
+#define clrscr() cout<<"\033[2J\033[1;1H"  // Implments Clear screen function
+
 using namespace std;
 
 int c;
 
 void NumberGuessGame :: play() // this method implements easy or hard game mode as per user's choice.
 {
-    cout<<"1. Hard mode.\n";
-    cout<<"2. Easy mode.\n";
-    cout<<"Enter your choice:\n";
+    clrscr();
+    cout<<"========================\n";
+    cout<<"  Number Guessing Game  \n";
+    cout<<"========================\n";
+    cout<<"    1. Hard mode.       \n";
+    cout<<"    2. Easy mode.       \n";
+    cout<<"  Enter your choice:    \n";
     cin>>c;
+    cout<<"\n\n";
 
     switch(c)
     {

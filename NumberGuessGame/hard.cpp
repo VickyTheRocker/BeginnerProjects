@@ -5,6 +5,7 @@ This file implements the EasyGame class which is responsible for the easy mode o
 */
 
 #include "gamebase.cpp"    // GameBase class implementation included.
+#include <cstdio>
 
 void HardGame :: comp()    // This method computes random number for computer in such a way that user never wins.
 {
@@ -34,6 +35,23 @@ void HardGame :: play()    // This method implements the hard mode gameplay
         std::cout<<"Session being terminated...\n";
         exit(0);
     }
+    else if(un>10 || un<0)
+    {
+        std::cout<<"Invalid input! Session being terminated...\n";
+        exit(0);
+    }
+    else
+    {
+        char ch;
+        ob.comp();
+        ob.display();
+        cout<<"Would you like to continue?(y/n)\n";
+        cin>>ch;
+        if(ch == 'n' || ch == 'N')
+        exit(0);
+    }
+}
+
     else if(un>10 || un<0)
     {
         std::cout<<"Invalid input! Session being terminated...\n";

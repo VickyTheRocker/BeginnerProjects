@@ -27,7 +27,12 @@ void EasyGame :: play()    // This method implements the easy mode gameplay.
     }
     else
     {
+        char ch;
         ob.comp();
         ob.display();
+        cout<<"Would you like to continue?(y/n)\n";
+        cin>>ch;
+        if(ch == 'n' || ch == 'N')
+        exit(0);
     }
 }
