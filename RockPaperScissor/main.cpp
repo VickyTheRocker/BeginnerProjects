@@ -13,8 +13,9 @@ int main()
         cout<<"Enter 1 for Rock.\n";
         cout<<"Enter 2 for Paper.\n";
         cout<<"Enter 3 for Scissor.\n";
-        cout<<"Enter your choice:\n";
+        cout<<"Enter your choice: ";
         cin>>uc;
+        cout << endl;
 
         cc = a[(rand() % 3)]-1;
 
@@ -80,6 +81,7 @@ int main()
             cout<<"Tie!\n";
         }
 
+        cout << endl;
         cout<<"Do you want to play again?\n";
         cout<<"Enter 1 for YES.\n";
         cout<<"Enter 2 for NO.\n";
